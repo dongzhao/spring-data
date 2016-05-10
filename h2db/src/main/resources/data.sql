@@ -1,0 +1,1 @@
+insert into my_customer (ID, FIRST_NAME, LAST_NAME, gender) values ('1', 'James', 'Last', 0);

@@ -12,6 +12,7 @@
 
     <modules>
         <module>mongodb</module>
+        <module>h2db</module>
     </modules>
 
     <properties>
