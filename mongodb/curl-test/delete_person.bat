@@ -1,0 +1,1 @@
+curl -i -X DELETE -H http://localhost:8890/mongodb/api/person/5731c684ee72e2aca246a813

@@ -1,0 +1,1 @@
+curl -i -X PUT -H "Content-Type: application/json" -d "{\"id\":\"5731c72cee72e2aca246a814\", \"firstName\":\"kevin1\", \"lastName\":\"Rudd1\"}" http://localhost:8890/mongodb/api/person 
