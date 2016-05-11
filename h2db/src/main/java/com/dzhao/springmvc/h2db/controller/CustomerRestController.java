@@ -52,6 +52,12 @@ public class CustomerRestController {
         customerRepository.delete(customer);
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Customer> findById(@PathVariable("id") String id){
+        Customer results = customerRepository.findOne(id);
+        return new ResponseEntity<Customer>(results, HttpStatus.OK);
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Customer>> findAll(){
         List<Customer> results = customerRepository.findAll();

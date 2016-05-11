@@ -1,0 +1,1 @@
+curl -i -X PUT -H "Content-Type: application/json" -d "{\"id\":\"1\", \"firstName\":\"kevin1\", \"lastName\":\"Rudd1\"}" http://localhost:8891/h2/api/customer

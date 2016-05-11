@@ -28,6 +28,8 @@ public class OrderRestController {
         Order result = new Order();
         Customer customer = customerRepository.findOne(order.getCustomer().getId());
         result.setOrderDate(order.getOrderDate());
+        result.setProduct(order.getProduct());
+        result.setQuantity(order.getQuantity());
         result.setCustomer(customer);
         result = orderRepository.save(result);
         return new ResponseEntity<Order>(result, HttpStatus.OK);
@@ -37,6 +39,12 @@ public class OrderRestController {
     public void delete(@PathVariable("id") String id){
         Order order = orderRepository.findOne(id);
         orderRepository.delete(order);
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Order> findById(@PathVariable("id") String id){
+        Order results = orderRepository.findOne(id);
+        return new ResponseEntity<Order>(results, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET)
